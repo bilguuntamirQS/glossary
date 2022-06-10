@@ -5,8 +5,6 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.text :email
       t.text :password
       t.integer :permission, default: 0
-      t.timestamp :updated
-      t.timestamp :deleted
 
       t.timestamps
     end

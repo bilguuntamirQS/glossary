@@ -5,8 +5,6 @@ class CreateCategories < ActiveRecord::Migration[7.0]
       t.text :category_name_mn
       t.references :category, null: true, foreign_key: true
       t.references :user, null: false, foreign_key: true
-      t.timestamp :updated
-      t.timestamp :deleted
 
       t.timestamps
     end
