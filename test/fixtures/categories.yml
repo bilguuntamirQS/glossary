@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_name: MyText
+  category_name_mn: MyText
+  parent_id: one
+  user_id: one
+  updated: 2022-06-08 10:23:35
+  deleted: 2022-06-08 10:23:35
+
+two:
+  category_name: MyText
+  category_name_mn: MyText
+  parent_id: two
+  user_id: two
+  updated: 2022-06-08 10:23:35
+  deleted: 2022-06-08 10:23:35
