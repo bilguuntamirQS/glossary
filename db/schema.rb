@@ -45,8 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_022526) do
     t.text "category_name_mn"
     t.bigint "category_id"
     t.bigint "user_id", null: false
-    t.datetime "updated", precision: nil
-    t.datetime "deleted", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_categories_on_category_id"
@@ -59,8 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_022526) do
     t.text "term"
     t.bigint "category_id", null: false
     t.bigint "user_id", null: false
-    t.datetime "updated", precision: nil
-    t.datetime "deleted", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_translations_on_category_id"
@@ -72,9 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_022526) do
     t.text "user_name"
     t.text "email"
     t.text "password"
-    t.integer "permission"
-    t.datetime "updated", precision: nil
-    t.datetime "deleted", precision: nil
+    t.integer "permission", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,11 +85,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_022526) do
   create_table "words", force: :cascade do |t|
     t.text "word"
     t.bigint "user_id", null: false
-    t.datetime "updated", precision: nil
-    t.datetime "deleted", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_words_on_user_id" 
+    t.index ["user_id"], name: "index_words_on_user_id"
   end
 
   add_foreign_key "categories", "categories"
