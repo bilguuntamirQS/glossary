@@ -1,11 +1,11 @@
 ActiveAdmin.register Translation do
-  permit_params :word, :translation, :term, :category, :user
+  permit_params :word_id, :translation, :term, :category_id, :user_id
 
   form do |f|
     f.inputs do
-      f.input :user, as: :select, collection: User.all.map { |u| [u.user_name, u.id]}
-      f.input :word, as: :select, collection: Word.all.map { |u| [u.word, u.id]}
-      f.input :category, as: :select, collection: Category.all.map { |u| [u.category_name, u.id]}
+      f.input :user_id, as: :select, collection: User.all.map { |u| [u.user_name, u.id]}
+      f.input :word_id, as: :select, collection: Word.all.map { |u| [u.word, u.id]}
+      f.input :category_id, as: :select, collection: Category.all.map { |u| [u.category_name, u.id]}
       f.input :translation, as: :string
       f.input :term, as: :string
     end
