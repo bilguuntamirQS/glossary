@@ -37,3 +37,5 @@ ActiveAdmin.register Word do
     end
   end
 end
+
+# test comment
